@@ -1,0 +1,46 @@
+//
+//  PrefixHeader.pch
+//  FSGame
+//
+//  Created by cheng jia on 15/5/11.
+//  Copyright (c) 2015年 cheng jia. All rights reserved.
+//
+
+#ifndef FSGame_PrefixHeader_pch
+#define FSGame_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define Nav_Color [UIColor colorWithRed:40/255.0 green:180/255.0 blue:84/255.0 alpha:1]
+#define Light_Gray_Color [UIColor colorWithRed:242/255.0 green:242/255.0 blue:242/255.0 alpha:1]
+#define Dark_Gray_Color [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1]
+#define Middle_Gray_Color [UIColor colorWithRed:190/255.0 green:190/255.0 blue:190/255.0 alpha:1]
+
+#define minus1_Color [UIColor colorWithRed:250/255.0 green:214/255.0 blue:126/255.0 alpha:1]
+#define minus2_Color [UIColor colorWithRed:249/255.0 green:161/255.0 blue:199/255.0 alpha:1]
+#define minus3_Color [UIColor colorWithRed:247/255.0 green:152/255.0 blue:122/255.0 alpha:1]
+#define pos1_Color [UIColor colorWithRed:143/255.0 green:205/255.0 blue:246/255.0 alpha:1]
+#define pos2_Color [UIColor colorWithRed:131/255.0 green:224/255.0 blue:180/255.0 alpha:1]
+#define pos3_Color [UIColor colorWithRed:133/255.0 green:223/255.0 blue:133/255.0 alpha:1]
+
+#define colors [NSArray arrayWithObjects:minus3_Color,minus2_Color,minus1_Color,pos1_Color,pos2_Color,pos3_Color, nil]
+
+#define IOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
+#define IPHONE5 ([UIScreen mainScreen].bounds.size.height == 568)
+#define IPHONE4 ([UIScreen mainScreen].bounds.size.height == 480)
+#define DEVICEWIDTH [UIScreen mainScreen].bounds.size.width
+#define DEVICEHIGHT [UIScreen mainScreen].bounds.size.height
+#define NORMAL_HEIGHT (IPHONE4?480:568)
+
+//横向比例
+#define WidthScale(number) ([UIScreen mainScreen].bounds.size.width/320*(number))
+//纵向比例
+#define HeightScale(number) ([UIScreen mainScreen].bounds.size.height/NORMAL_HEIGHT*(number))
+
+#define TSIZE1 19.0f
+#define TSIZE2 17.0f
+#define TSIZE3 15
+#define TSIZE4 13
+
+#endif

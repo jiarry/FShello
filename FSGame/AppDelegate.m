@@ -7,7 +7,10 @@
 //
 
 #import "AppDelegate.h"
-
+#import "SlideNavigationController.h"
+#import "CLeftMenuViewController.h"
+#import "CSOVViewController.h"
+#import "CRightViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +20,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    //1.创建左边菜单和中间主界面视图
+    CSOVViewController *centerViewCtrl=[[CSOVViewController alloc]init];
+    CLeftMenuViewController *leftMenuViewCtrl=[[CLeftMenuViewController alloc]init];
+    CRightViewController    *rightViewCtrl=[[CRightViewController alloc]init];
+    //2.创建导航栏
+    SlideNavigationController *slideNavigationCtrl=[[SlideNavigationController alloc]initWithRootViewController:centerViewCtrl];
+    slideNavigationCtrl.leftMenu=leftMenuViewCtrl;
+    slideNavigationCtrl.righMenu=rightViewCtrl;
+    self.window.rootViewController=slideNavigationCtrl;
     return YES;
 }
 

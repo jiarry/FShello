@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  CBaseViewController.h
 //  FSGame
 //
 //  Created by cheng jia on 15/5/11.
@@ -8,10 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface CBaseViewController : UIViewController
 
-@property (strong, nonatomic) UIWindow *window;
-
-
+-(void)setNavigationTitle:(NSString*)title;
 @end
-

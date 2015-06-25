@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  CEleCell.h
 //  FSGame
 //
 //  Created by cheng jia on 15/5/11.
@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
-
+@interface CEleCell : UITableViewCell
+{
+    UILabel *eNameLB;
+    UILabel *eSNameLB;
+    UILabel *bvLB;
+    NSMutableArray *arr;
+}
 @end
-
